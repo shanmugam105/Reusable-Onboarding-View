@@ -8,14 +8,14 @@
 
 import UIKit
 
-struct OnboardingItem {
+public struct OnboardingItem {
     let id: String?
     let itemUrl: String?
     let image: UIImage?
     let itemTitle: String?
     let itemDescription: String?
     
-    init(id: String? = nil,
+    public init(id: String? = nil,
          itemUrl: String? = nil,
          image: UIImage? = nil,
          title: String? = nil,

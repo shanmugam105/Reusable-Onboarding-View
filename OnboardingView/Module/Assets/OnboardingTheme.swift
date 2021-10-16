@@ -8,12 +8,18 @@
 import UIKit
 
 
-struct OnboardingTheme {
+public struct OnboardingTheme {
     let color: UIColor
     let style: ButtonStyle
     let font: UIFont?
     
-    enum ButtonStyle {
+    public init(color: UIColor, style: ButtonStyle, font: UIFont?) {
+        self.color = color
+        self.style = style
+        self.font = font
+    }
+    
+    public enum ButtonStyle {
         case fill(textColor: UIColor, backgroundColor: UIColor)
         case textOnly(textColor: UIColor)
         var value: (textColor: UIColor, backgroundColor: UIColor) {

@@ -7,24 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04204A9E271A94290064BE8A /* OnboardingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204A9D271A94290064BE8A /* OnboardingTheme.swift */; };
+		04204ABA271AAE170064BE8A /* OnboardingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04204AB8271AAE170064BE8A /* OnboardingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04204ABD271AAE170064BE8A /* OnboardingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04204AB6271AAE170064BE8A /* OnboardingView.framework */; };
+		04204ABE271AAE170064BE8A /* OnboardingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04204AB6271AAE170064BE8A /* OnboardingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04204ACD271AAE420064BE8A /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204AC5271AAE420064BE8A /* OnboardingCell.swift */; };
+		04204ACE271AAE420064BE8A /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04204AC6271AAE420064BE8A /* OnboardingCell.xib */; };
+		04204ACF271AAE420064BE8A /* OnboardingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204AC7271AAE420064BE8A /* OnboardingImageView.swift */; };
+		04204AD0271AAE420064BE8A /* OnboardingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204AC8271AAE420064BE8A /* OnboardingTheme.swift */; };
+		04204AD2271AAE420064BE8A /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204ACA271AAE420064BE8A /* OnboardingItem.swift */; };
+		04204AD3271AAE420064BE8A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204ACB271AAE420064BE8A /* OnboardingView.swift */; };
+		04204AD4271AAE420064BE8A /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04204ACC271AAE420064BE8A /* OnboardingView.xib */; };
 		04707B81271806DF00CF8681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B80271806DF00CF8681 /* AppDelegate.swift */; };
 		04707B83271806DF00CF8681 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B82271806DF00CF8681 /* SceneDelegate.swift */; };
 		04707B85271806DF00CF8681 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B84271806DF00CF8681 /* HomeViewController.swift */; };
 		04707B88271806DF00CF8681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04707B86271806DF00CF8681 /* Main.storyboard */; };
 		04707B8A271806E600CF8681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04707B89271806E600CF8681 /* Assets.xcassets */; };
 		04707B8D271806E600CF8681 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04707B8B271806E600CF8681 /* LaunchScreen.storyboard */; };
-		04707B9A2718079D00CF8681 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B992718079D00CF8681 /* OnboardingView.swift */; };
-		04707B9C271807C400CF8681 /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04707B9B271807C400CF8681 /* OnboardingView.xib */; };
-		04707BA227180F3900CF8681 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA027180F3900CF8681 /* OnboardingCell.swift */; };
-		04707BA327180F3900CF8681 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04707BA127180F3900CF8681 /* OnboardingCell.xib */; };
-		04707BA627180FA400CF8681 /* OnboardingViewAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */; };
-		04707BA82718129400CF8681 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA72718129400CF8681 /* OnboardingItem.swift */; };
-		04707BAA2718382100CF8681 /* OnboardingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA92718382100CF8681 /* OnboardingImageView.swift */; };
+		0489630F271AB6F20073AF80 /* OnboardingViewAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04204AC9271AAE420064BE8A /* OnboardingViewAsset.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		04204ABB271AAE170064BE8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04707B75271806DF00CF8681 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04204AB5271AAE170064BE8A;
+			remoteInfo = OnboardingView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04204AB0271AACE20064BE8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04204ABE271AAE170064BE8A /* OnboardingView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		04204A9D271A94290064BE8A /* OnboardingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTheme.swift; sourceTree = "<group>"; };
+		04204AB6271AAE170064BE8A /* OnboardingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04204AB8271AAE170064BE8A /* OnboardingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingView.h; sourceTree = "<group>"; };
+		04204AB9271AAE170064BE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04204AC5271AAE420064BE8A /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		04204AC6271AAE420064BE8A /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
+		04204AC7271AAE420064BE8A /* OnboardingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingImageView.swift; sourceTree = "<group>"; };
+		04204AC8271AAE420064BE8A /* OnboardingTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingTheme.swift; sourceTree = "<group>"; };
+		04204AC9271AAE420064BE8A /* OnboardingViewAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OnboardingViewAsset.xcassets; sourceTree = "<group>"; };
+		04204ACA271AAE420064BE8A /* OnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		04204ACB271AAE420064BE8A /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		04204ACC271AAE420064BE8A /* OnboardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingView.xib; sourceTree = "<group>"; };
 		04707B7D271806DF00CF8681 /* Reusable-Onboarding-View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reusable-Onboarding-View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04707B80271806DF00CF8681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04707B82271806DF00CF8681 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,30 +70,73 @@
 		04707B89271806E600CF8681 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04707B8C271806E600CF8681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04707B8E271806E600CF8681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04707B992718079D00CF8681 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		04707B9B271807C400CF8681 /* OnboardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingView.xib; sourceTree = "<group>"; };
-		04707BA027180F3900CF8681 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
-		04707BA127180F3900CF8681 /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
-		04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OnboardingViewAsset.xcassets; sourceTree = "<group>"; };
-		04707BA72718129400CF8681 /* OnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
-		04707BA92718382100CF8681 /* OnboardingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04707B7A271806DF00CF8681 /* Frameworks */ = {
+		04204AB3271AAE170064BE8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04707B7A271806DF00CF8681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04204ABD271AAE170064BE8A /* OnboardingView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04204AB7271AAE170064BE8A /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				04204AC2271AAE420064BE8A /* Module */,
+				04204AB8271AAE170064BE8A /* OnboardingView.h */,
+				04204AB9271AAE170064BE8A /* Info.plist */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		04204AC2271AAE420064BE8A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				04204AC3271AAE420064BE8A /* Assets */,
+				04204ACB271AAE420064BE8A /* OnboardingView.swift */,
+				04204ACC271AAE420064BE8A /* OnboardingView.xib */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		04204AC3271AAE420064BE8A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				04204AC4271AAE420064BE8A /* Nib */,
+				04204AC7271AAE420064BE8A /* OnboardingImageView.swift */,
+				04204AC8271AAE420064BE8A /* OnboardingTheme.swift */,
+				04204AC9271AAE420064BE8A /* OnboardingViewAsset.xcassets */,
+				04204ACA271AAE420064BE8A /* OnboardingItem.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		04204AC4271AAE420064BE8A /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				04204AC5271AAE420064BE8A /* OnboardingCell.swift */,
+				04204AC6271AAE420064BE8A /* OnboardingCell.xib */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
 		04707B74271806DF00CF8681 = {
 			isa = PBXGroup;
 			children = (
 				04707B7F271806DF00CF8681 /* Reusable-Onboarding-View */,
+				04204AB7271AAE170064BE8A /* OnboardingView */,
 				04707B7E271806DF00CF8681 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				04707B7D271806DF00CF8681 /* Reusable-Onboarding-View.app */,
+				04204AB6271AAE170064BE8A /* OnboardingView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,7 +153,6 @@
 		04707B7F271806DF00CF8681 /* Reusable-Onboarding-View */ = {
 			isa = PBXGroup;
 			children = (
-				04707B982718076200CF8681 /* Module */,
 				04707B952718070800CF8681 /* Delegate */,
 				04707B962718071400CF8681 /* Controller */,
 				04707B972718072800CF8681 /* Storyboard */,
@@ -116,40 +196,38 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		04707B982718076200CF8681 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				04707B9F27180EF100CF8681 /* Assets */,
-				04707B992718079D00CF8681 /* OnboardingView.swift */,
-				04707B9B271807C400CF8681 /* OnboardingView.xib */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		04707B9F27180EF100CF8681 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				04707BA72718129400CF8681 /* OnboardingItem.swift */,
-				04204A9D271A94290064BE8A /* OnboardingTheme.swift */,
-				04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */,
-				04707BA427180F7E00CF8681 /* Nib */,
-				04707BA92718382100CF8681 /* OnboardingImageView.swift */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		04707BA427180F7E00CF8681 /* Nib */ = {
-			isa = PBXGroup;
-			children = (
-				04707BA027180F3900CF8681 /* OnboardingCell.swift */,
-				04707BA127180F3900CF8681 /* OnboardingCell.xib */,
-			);
-			path = Nib;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		04204AB1271AAE170064BE8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04204ABA271AAE170064BE8A /* OnboardingView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		04204AB5271AAE170064BE8A /* OnboardingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04204ABF271AAE170064BE8A /* Build configuration list for PBXNativeTarget "OnboardingView" */;
+			buildPhases = (
+				04204AB1271AAE170064BE8A /* Headers */,
+				04204AB2271AAE170064BE8A /* Sources */,
+				04204AB3271AAE170064BE8A /* Frameworks */,
+				04204AB4271AAE170064BE8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnboardingView;
+			productName = OnboardingView;
+			productReference = 04204AB6271AAE170064BE8A /* OnboardingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		04707B7C271806DF00CF8681 /* Reusable-Onboarding-View */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04707B91271806E600CF8681 /* Build configuration list for PBXNativeTarget "Reusable-Onboarding-View" */;
@@ -157,10 +235,12 @@
 				04707B79271806DF00CF8681 /* Sources */,
 				04707B7A271806DF00CF8681 /* Frameworks */,
 				04707B7B271806DF00CF8681 /* Resources */,
+				04204AB0271AACE20064BE8A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04204ABC271AAE170064BE8A /* PBXTargetDependency */,
 			);
 			name = "Reusable-Onboarding-View";
 			productName = "Reusable-Onboarding-View";
@@ -176,6 +256,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					04204AB5271AAE170064BE8A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					04707B7C271806DF00CF8681 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -195,43 +278,66 @@
 			projectRoot = "";
 			targets = (
 				04707B7C271806DF00CF8681 /* Reusable-Onboarding-View */,
+				04204AB5271AAE170064BE8A /* OnboardingView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04204AB4271AAE170064BE8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0489630F271AB6F20073AF80 /* OnboardingViewAsset.xcassets in Resources */,
+				04204ACE271AAE420064BE8A /* OnboardingCell.xib in Resources */,
+				04204AD4271AAE420064BE8A /* OnboardingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04707B7B271806DF00CF8681 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04707B8D271806E600CF8681 /* LaunchScreen.storyboard in Resources */,
-				04707B9C271807C400CF8681 /* OnboardingView.xib in Resources */,
 				04707B8A271806E600CF8681 /* Assets.xcassets in Resources */,
-				04707BA327180F3900CF8681 /* OnboardingCell.xib in Resources */,
 				04707B88271806DF00CF8681 /* Main.storyboard in Resources */,
-				04707BA627180FA400CF8681 /* OnboardingViewAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04204AB2271AAE170064BE8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04204AD0271AAE420064BE8A /* OnboardingTheme.swift in Sources */,
+				04204AD2271AAE420064BE8A /* OnboardingItem.swift in Sources */,
+				04204ACD271AAE420064BE8A /* OnboardingCell.swift in Sources */,
+				04204AD3271AAE420064BE8A /* OnboardingView.swift in Sources */,
+				04204ACF271AAE420064BE8A /* OnboardingImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04707B79271806DF00CF8681 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04707B85271806DF00CF8681 /* HomeViewController.swift in Sources */,
-				04707BAA2718382100CF8681 /* OnboardingImageView.swift in Sources */,
-				04707BA227180F3900CF8681 /* OnboardingCell.swift in Sources */,
-				04707B9A2718079D00CF8681 /* OnboardingView.swift in Sources */,
 				04707B81271806DF00CF8681 /* AppDelegate.swift in Sources */,
 				04707B83271806DF00CF8681 /* SceneDelegate.swift in Sources */,
-				04204A9E271A94290064BE8A /* OnboardingTheme.swift in Sources */,
-				04707BA82718129400CF8681 /* OnboardingItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04204ABC271AAE170064BE8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04204AB5271AAE170064BE8A /* OnboardingView */;
+			targetProxy = 04204ABB271AAE170064BE8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04707B86271806DF00CF8681 /* Main.storyboard */ = {
@@ -253,6 +359,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		04204AC0271AAE170064BE8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OnboardingView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sparkout-Tech-Solution.OnboardingView";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04204AC1271AAE170064BE8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OnboardingView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sparkout-Tech-Solution.OnboardingView";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		04707B8F271806E600CF8681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -372,6 +538,7 @@
 		04707B92271806E600CF8681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -391,6 +558,7 @@
 		04707B93271806E600CF8681 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -410,6 +578,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04204ABF271AAE170064BE8A /* Build configuration list for PBXNativeTarget "OnboardingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04204AC0271AAE170064BE8A /* Debug */,
+				04204AC1271AAE170064BE8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04707B78271806DF00CF8681 /* Build configuration list for PBXProject "Reusable-Onboarding-View" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

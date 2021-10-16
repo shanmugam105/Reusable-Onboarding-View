@@ -7,18 +7,19 @@
 
 import UIKit
 
-final class OnboardingView: UIView {
+final public class OnboardingView: UIView {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet weak var trailingButton: UIButton!
     @IBOutlet weak var leadingButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
-    var onboardingItems: [OnboardingItem] = [OnboardingItem]() {
+    private let bundle: Bundle? = Bundle(identifier: "Sparkout-Tech-Solution.OnboardingView")
+    public var onboardingItems: [OnboardingItem] = [OnboardingItem]() {
         didSet{
             pageControl.numberOfPages = onboardingItems.count
         }
     }
-    var onboardingTheme: OnboardingTheme?
+    public var onboardingTheme: OnboardingTheme?
     {
         didSet{
             controlButtonConfiguration(onboardingTheme)
@@ -33,7 +34,7 @@ final class OnboardingView: UIView {
             checkButtonStatus()
         }
     }
-    @objc var itemFinished: (()->Void)?
+    @objc public var itemFinished: (()->Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,14 +47,15 @@ final class OnboardingView: UIView {
     }
     
     private func collectionViewConfiguration(){
+        
         guard
-            let nib = Bundle.main.loadNibNamed("\(Self.self)", owner: self, options: nil)?.first as? UIView
+            let nib = bundle?.loadNibNamed("\(Self.self)", owner: self, options: nil)?.first as? UIView
         else { fatalError("Unexpected error!") }
         nib.frame = bounds
         addSubview(nib)
         collectionView.delegate = self
         collectionView.dataSource = self
-        let sliderViewNib = UINib(nibName: "OnboardingCell", bundle: nil)
+        let sliderViewNib = UINib(nibName: "OnboardingCell", bundle: bundle)
         collectionView.register(sliderViewNib,
                                 forCellWithReuseIdentifier: "OnboardingCell")
         controlButtonConfiguration(nil)
@@ -80,7 +82,7 @@ final class OnboardingView: UIView {
         // Control buttons
         leadingButton.setTitle("Previous", for: .normal)
         leadingButton.setTitleColor(btnStyle?.textColor, for: .normal)
-        leadingButton.setImage(#imageLiteral(resourceName: "left-chevron"), for: .normal)
+        leadingButton.setImage(UIImage(named: "left-chevron", in: bundle, compatibleWith: nil), for: .normal)
         leadingButton.titleLabel?.font = .systemFont(ofSize: 14)
         leadingButton.addTarget(self, action: #selector(leadingButtonTapped), for: .touchUpInside)
         leadingButton.backgroundColor = btnStyle?.backgroundColor
@@ -88,7 +90,7 @@ final class OnboardingView: UIView {
         
         trailingButton.setTitle("Next", for: .normal)
         trailingButton.setTitleColor(btnStyle?.textColor, for: .normal)
-        trailingButton.setImage(#imageLiteral(resourceName: "right-chevron"), for: .normal)
+        trailingButton.setImage(UIImage(named: "right-chevron", in: bundle, compatibleWith: nil), for: .normal)
         trailingButton.semanticContentAttribute = .forceRightToLeft
         trailingButton.titleLabel?.font = .systemFont(ofSize: 14)
         trailingButton.addTarget(self, action: #selector(trailingButtonTapped), for: .touchUpInside)
@@ -138,11 +140,11 @@ final class OnboardingView: UIView {
 }
 
 extension OnboardingView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         onboardingItems.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnboardingCell",
                                                       for: indexPath) as! OnboardingCell
         cell.configureView(for: onboardingItems[indexPath.item])
@@ -150,11 +152,11 @@ extension OnboardingView: UICollectionViewDelegate, UICollectionViewDataSource, 
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width, height: frame.height - 56)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentSlide = Int(scrollView.contentOffset.x / width)
         pageControl.currentPage = currentSlide

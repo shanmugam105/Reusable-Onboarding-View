@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OnboardingView
 
 class HomeViewController: UIViewController {
     @IBOutlet private weak var onboardingView: OnboardingView!
@@ -31,9 +32,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         onboardingView.onboardingItems = onboardingItems
         onboardingView.itemFinished = gotoHomeScreen
-        onboardingView.onboardingTheme = .init(color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
-                                               style: .fill(textColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), backgroundColor: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)),
-                                               font: .boldSystemFont(ofSize: 12))
+        onboardingView.onboardingTheme = OnboardingTheme(color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
+                                                         style: .fill(textColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), backgroundColor: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)),
+                                                         font: .boldSystemFont(ofSize: 12))
     }
     func gotoHomeScreen() {
         print("Goto home screen!")
