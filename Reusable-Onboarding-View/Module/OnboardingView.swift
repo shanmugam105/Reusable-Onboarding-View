@@ -13,14 +13,15 @@ final class OnboardingView: UIView {
     @IBOutlet weak var leadingButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
-    var onboardingItems: [SliderItem] = [SliderItem]() {
+    var onboardingItems: [OnboardingItem] = [OnboardingItem]() {
         didSet{
             pageControl.numberOfPages = onboardingItems.count
         }
     }
-    var themeColor: UIColor = .blue {
+    var onboardingTheme: OnboardingTheme?
+    {
         didSet{
-            controlButtonConfiguration(themeColor)
+            controlButtonConfiguration(onboardingTheme)
         }
     }
     
@@ -55,32 +56,51 @@ final class OnboardingView: UIView {
         let sliderViewNib = UINib(nibName: "OnboardingCell", bundle: nil)
         collectionView.register(sliderViewNib,
                                 forCellWithReuseIdentifier: "OnboardingCell")
-        controlButtonConfiguration()
+        controlButtonConfiguration(nil)
     }
     
-    private func controlButtonConfiguration(_ color: UIColor? = .systemBlue) {
+    private func controlButtonConfiguration(_ onboardingTheme: OnboardingTheme?) {
+        var theme: OnboardingTheme!
+        // Default theme
+        if let newTheme = onboardingTheme {
+            theme = newTheme
+        } else {
+            theme = OnboardingTheme(color: .systemBlue,
+                                    style: .fill(textColor: .white, backgroundColor: .systemBlue),
+                                    font: .systemFont(ofSize: 12))
+        }
         // Page control
-        pageControl.isUserInteractionEnabled = false
-        pageControl.pageIndicatorTintColor = color?.withAlphaComponent(0.5) ?? UIColor.white.withAlphaComponent(0.5)
-        pageControl.currentPageIndicatorTintColor = color ?? UIColor.white
+        pageControl.isUserInteractionEnabled        = false
+        pageControl.pageIndicatorTintColor          = theme?.color.withAlphaComponent(0.5) ?? UIColor.white.withAlphaComponent(0.5)
+        pageControl.currentPageIndicatorTintColor   = theme?.color ?? UIColor.white
+        
+        // Button colors
+        let btnStyle                = theme?.style.value
+        let cornerRadius: CGFloat   = 8
         // Control buttons
         leadingButton.setTitle("Previous", for: .normal)
-        leadingButton.setTitleColor(color, for: .normal)
+        leadingButton.setTitleColor(btnStyle?.textColor, for: .normal)
         leadingButton.setImage(#imageLiteral(resourceName: "left-chevron"), for: .normal)
         leadingButton.titleLabel?.font = .systemFont(ofSize: 14)
         leadingButton.addTarget(self, action: #selector(leadingButtonTapped), for: .touchUpInside)
+        leadingButton.backgroundColor = btnStyle?.backgroundColor
+        leadingButton.layer.cornerRadius = cornerRadius
         
         trailingButton.setTitle("Next", for: .normal)
-        trailingButton.setTitleColor(color, for: .normal)
+        trailingButton.setTitleColor(btnStyle?.textColor, for: .normal)
         trailingButton.setImage(#imageLiteral(resourceName: "right-chevron"), for: .normal)
         trailingButton.semanticContentAttribute = .forceRightToLeft
         trailingButton.titleLabel?.font = .systemFont(ofSize: 14)
         trailingButton.addTarget(self, action: #selector(trailingButtonTapped), for: .touchUpInside)
+        trailingButton.backgroundColor = btnStyle?.backgroundColor
+        trailingButton.layer.cornerRadius = cornerRadius
         
-        skipButton.setTitleColor(color, for: .normal)
+        skipButton.setTitleColor(btnStyle?.textColor, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.titleLabel?.font = .systemFont(ofSize: 14)
         skipButton.addTarget(self, action: #selector(onboardingItemFinished), for: .touchUpInside)
+        skipButton.backgroundColor = btnStyle?.backgroundColor
+        skipButton.layer.cornerRadius = cornerRadius
         
         checkButtonStatus()
     }
@@ -125,14 +145,7 @@ extension OnboardingView: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnboardingCell",
                                                       for: indexPath) as! OnboardingCell
-        if let imageContent = onboardingItems[indexPath.item].image {
-            cell.contentImageView.image = imageContent
-        } else if let imageContent = onboardingItems[indexPath.item].itemUrl {
-            cell.contentImageView.setImage(from: imageContent)
-        }
-        cell.contentMode = .scaleAspectFill
-        cell.titleLabel.text = onboardingItems[indexPath.item].itemTitle
-        cell.descriptionLabel.text = onboardingItems[indexPath.item].itemDescription
+        cell.configureView(for: onboardingItems[indexPath.item])
         return cell
         
     }

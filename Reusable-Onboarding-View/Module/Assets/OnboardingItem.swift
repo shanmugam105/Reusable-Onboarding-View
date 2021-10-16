@@ -1,5 +1,5 @@
 //
-//  SliderItem.swift
+//  OnboardingItem.swift
 //  Image-Slider-Using-CollectionView
 //
 //  Created by Mac on 18/09/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SliderItem {
+struct OnboardingItem {
     let id: String?
     let itemUrl: String?
     let image: UIImage?

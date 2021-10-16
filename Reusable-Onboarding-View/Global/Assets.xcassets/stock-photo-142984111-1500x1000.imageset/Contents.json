@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "stock-photo-142984111-1500x1000.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "stock-photo-142984111-1500x1000.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },

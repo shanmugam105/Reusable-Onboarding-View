@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04204A9E271A94290064BE8A /* OnboardingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04204A9D271A94290064BE8A /* OnboardingTheme.swift */; };
 		04707B81271806DF00CF8681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B80271806DF00CF8681 /* AppDelegate.swift */; };
 		04707B83271806DF00CF8681 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B82271806DF00CF8681 /* SceneDelegate.swift */; };
 		04707B85271806DF00CF8681 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707B84271806DF00CF8681 /* HomeViewController.swift */; };
@@ -18,11 +19,12 @@
 		04707BA227180F3900CF8681 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA027180F3900CF8681 /* OnboardingCell.swift */; };
 		04707BA327180F3900CF8681 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04707BA127180F3900CF8681 /* OnboardingCell.xib */; };
 		04707BA627180FA400CF8681 /* OnboardingViewAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */; };
-		04707BA82718129400CF8681 /* SliderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA72718129400CF8681 /* SliderItem.swift */; };
+		04707BA82718129400CF8681 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA72718129400CF8681 /* OnboardingItem.swift */; };
 		04707BAA2718382100CF8681 /* OnboardingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04707BA92718382100CF8681 /* OnboardingImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04204A9D271A94290064BE8A /* OnboardingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTheme.swift; sourceTree = "<group>"; };
 		04707B7D271806DF00CF8681 /* Reusable-Onboarding-View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reusable-Onboarding-View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04707B80271806DF00CF8681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04707B82271806DF00CF8681 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		04707BA027180F3900CF8681 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		04707BA127180F3900CF8681 /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 		04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OnboardingViewAsset.xcassets; sourceTree = "<group>"; };
-		04707BA72718129400CF8681 /* SliderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderItem.swift; sourceTree = "<group>"; };
+		04707BA72718129400CF8681 /* OnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		04707BA92718382100CF8681 /* OnboardingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +129,8 @@
 		04707B9F27180EF100CF8681 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				04707BA72718129400CF8681 /* SliderItem.swift */,
+				04707BA72718129400CF8681 /* OnboardingItem.swift */,
+				04204A9D271A94290064BE8A /* OnboardingTheme.swift */,
 				04707BA527180FA400CF8681 /* OnboardingViewAsset.xcassets */,
 				04707BA427180F7E00CF8681 /* Nib */,
 				04707BA92718382100CF8681 /* OnboardingImageView.swift */,
@@ -223,7 +226,8 @@
 				04707B9A2718079D00CF8681 /* OnboardingView.swift in Sources */,
 				04707B81271806DF00CF8681 /* AppDelegate.swift in Sources */,
 				04707B83271806DF00CF8681 /* SceneDelegate.swift in Sources */,
-				04707BA82718129400CF8681 /* SliderItem.swift in Sources */,
+				04204A9E271A94290064BE8A /* OnboardingTheme.swift in Sources */,
+				04707BA82718129400CF8681 /* OnboardingItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
